@@ -1,0 +1,14 @@
+﻿#transformers torch
+#arabert
+#faeasapy
+groq
+python-dotenv
+scikit-learn
+matplotlib
+seaborn
+pandas
+numpy
+tqdm
+loguru
+arabic-reshaper
+python-bidi

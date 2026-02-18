@@ -1,0 +1,72 @@
+{
+  "macro_f1": 0.8059964726631393,
+  "weighted_f1": 0.77005291005291,
+  "cohen_kappa": 0.738480697384807,
+  "class_report": {
+    "product_inquiry": {
+      "precision": 0.6521739130434783,
+      "recall": 0.7894736842105263,
+      "f1-score": 0.7142857142857143,
+      "support": 19.0
+    },
+    "technical_support": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1-score": 0.8888888888888888,
+      "support": 20.0
+    },
+    "billing_question": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1-score": 0.8571428571428571,
+      "support": 21.0
+    },
+    "complaint": {
+      "precision": 0.9375,
+      "recall": 0.7894736842105263,
+      "f1-score": 0.8571428571428571,
+      "support": 19.0
+    },
+    "general_question": {
+      "precision": 1.0,
+      "recall": 0.35,
+      "f1-score": 0.5185185185185185,
+      "support": 20.0
+    },
+    "escalation_needed": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "accuracy": 0.79,
+    "macro avg": {
+      "precision": 0.8566123188405798,
+      "recall": 0.8214912280701755,
+      "f1-score": 0.8059964726631393,
+      "support": 100.0
+    },
+    "weighted avg": {
+      "precision": 0.8295380434782609,
+      "recall": 0.79,
+      "f1-score": 0.77005291005291,
+      "support": 100.0
+    }
+  },
+  "confusion_matrix": null,
+  "handoff_precision": 0.95,
+  "handoff_recall": 1.0,
+  "handoff_f1": 0.9743589743589743,
+  "ece": 0.11999999999999986,
+  "latency_p50": 3455.446720123291,
+  "latency_p95": 4274.145054817199,
+  "latency_mean": 2990.2932047843933,
+  "latency_std": 1291.8650660977978,
+  "error_rate": 0.0,
+  "accuracy_by_difficulty": {
+    "easy": 0.6111111111111112,
+    "medium": 0.9024390243902439,
+    "hard": 0.8695652173913043
+  },
+  "total_samples": 100.0
+}

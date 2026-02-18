@@ -1,0 +1,617 @@
+2026-02-16 22:50:24 | INFO     | __main__:main - 📚 Initializing knowledge base...
+2026-02-16 22:50:24 | INFO     | backend.data.knowledge_base_manager:__init__ - 🔧 Initializing KnowledgeBaseManager
+2026-02-16 22:50:24 | INFO     | backend.data.knowledge_base_manager:__init__ -    Embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:50:24 | INFO     | backend.data.knowledge_base_manager:__init__ -    Collection: arabic_knowledge_base
+2026-02-16 22:50:24 | INFO     | backend.data.knowledge_base_manager:__init__ - 📥 Loading embedding model (this may take a moment)...
+2026-02-16 22:50:41 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Embedding model loaded successfully
+2026-02-16 22:50:41 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Loaded existing collection: arabic_knowledge_base
+2026-02-16 22:50:42 | INFO     | backend.data.knowledge_base_manager:__init__ - 📊 Collection contains 70 documents
+2026-02-16 22:50:42 | INFO     | __main__:main - ✅ Knowledge base loaded: 70 documents
+2026-02-16 22:50:42 | INFO     | __main__:main - 📂 Loading test dataset...
+2026-02-16 22:50:42 | INFO     | __main__:main - ✅ Loaded 100 test cases
+2026-02-16 22:50:42 | INFO     | __main__:main - 🤖 Initializing KnowledgeRetrieverAgent...
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:__init__ - 🔧 Initializing knowledge base...
+2026-02-16 22:50:42 | INFO     | backend.data.knowledge_base_manager:__init__ - 🔧 Initializing KnowledgeBaseManager
+2026-02-16 22:50:42 | INFO     | backend.data.knowledge_base_manager:__init__ -    Embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:50:42 | INFO     | backend.data.knowledge_base_manager:__init__ -    Collection: arabic_knowledge_base
+2026-02-16 22:50:42 | INFO     | backend.data.knowledge_base_manager:__init__ - 📥 Loading embedding model (this may take a moment)...
+2026-02-16 22:50:42 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Embedding model loaded successfully
+2026-02-16 22:50:42 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Loaded existing collection: arabic_knowledge_base
+2026-02-16 22:50:42 | INFO     | backend.data.knowledge_base_manager:__init__ - 📊 Collection contains 70 documents
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:__init__ - ✅ KnowledgeRetrieverAgent initialized
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:__init__ -    Documents in KB: 70
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:__init__ -    Embedding Model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:__init__ -    Results per query: 10
+2026-02-16 22:50:42 | INFO     | __main__:main - 🧪 Starting benchmark...
+2026-02-16 22:50:42 | INFO     | __main__:run_benchmark_async - 
+============================================================
+2026-02-16 22:50:42 | INFO     | __main__:run_benchmark_async - 🧪 BENCHMARKING AGENT 2: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-02-16 22:50:42 | INFO     | __main__:run_benchmark_async -    Test Cases: 100
+2026-02-16 22:50:42 | INFO     | __main__:run_benchmark_async - ============================================================
+
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنكم توضيح مميزات الهاتف الجديد الذي أصدرتموه؟
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:42 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 298ms
+2026-02-16 22:50:42 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي التفاصيل الفنية حول المنتج المح... (score: 0.46)
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لماذا لا يعمل الإنترنت عندي منذ الصباح؟
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:42 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 82ms
+2026-02-16 22:50:42 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل هناك نصائح لتحسين سرعة البرنامج وت... (score: 0.36)
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني استرجاع مبلغ الفاتورة الأخيرة؟
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:42 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 38ms
+2026-02-16 22:50:42 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني إلغاء الدفع أو استرداد المب... (score: 0.45)
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: ما هي ساعات عمل مركز الدعم الفني؟
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:42 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 31ms
+2026-02-16 22:50:42 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي طرق الدفع المتاحة لديكم؟ (score: 0.23)
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: المنتج الذي اشتريته لا يعمل كما توقعت، أريد استرجاعه فوراً!
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:42 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 38ms
+2026-02-16 22:50:42 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي التفاصيل الفنية حول المنتج المح... (score: 0.42)
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكن لصديقي شراء المنتج عبر حسابي؟
+2026-02-16 22:50:42 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 36ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون شحن مجاني على الطلبات الكبيرة؟ (score: 0.38)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: تلف الجهاز بعد التحديث الأخير، ماذا أفعل؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 33ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط الاشتراك Basic، Adva... (score: 0.31)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل فاتورتي الشهرية تشمل كل الاستهلاك الذي قمت به؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 29ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.41)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: أريد معرفة سياسة الاستبدال الخاصة بكم
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 33ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.34)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: المنتج وصل معيب والخدمة سيئة جداً
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 33ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ماذا أفعل في حالة عدم استلام الطلب أو... (score: 0.39)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكن الحصول على خصم على نفس المنتج إذا اشتريت مجدداً؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 53ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل هناك خصومات على الباقات عند الاشتر... (score: 0.55)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: التطبيق يغلق تلقائياً بعد التحديث الأخير، الرجاء المساعدة
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 36ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط الاشتراك Basic، Adva... (score: 0.40)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني دفع الفاتورة عبر تطبيق البنك؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 38ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.38)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: ما هي أحدث العروض المتاحة حالياً للاشتراك؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 32ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.29)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: المنتج لا يعمل والضمان لا يغطي هذه المشكلة، ماذا تفعلون؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 24ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي سياسة الاسترداد والإرجاع الخاصة... (score: 0.47)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يمكنني تحديث معلومات بطاقتي الائتمانية؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 29ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.31)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لو سمحت، عندي مشكلة في تسجيل الدخول إلى حسابي.
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 26ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني تحديث البرنامج لأحدث إصدار؟ (score: 0.35)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل تقدمون دعم فني للعملاء باللغة الإنجليزية؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 26ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.36)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يمكنني الحصول على نسخة من فاتورتي السابقة؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 27ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني الحصول على فاتورة مفصلة لط... (score: 0.42)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: المنتج الذي طلبته لم يصل بعد رغم مرور أسبوعين.
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 30ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط التسعير الأساسية وال... (score: 0.40)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يوجد ضمان على سماعات الرأس التي اشتريتها؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 29ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون دعمًا فنيًا على مدار الساعة؟ (score: 0.34)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: الجهاز يصدر صوتاً غريباً وعندئذ يفصل تلقائياً
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 25ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ماذا أفعل إذا تعطل التثبيت أو توقف فجأة؟ (score: 0.42)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني تعديل بيانات الفوترة في حسابي؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 27ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.35)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: ما هي سياسة الخصوصية لديكم؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 25ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.30)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لماذا الخدمة بطيئة جداً هذا الشهر؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 24ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ماذا أفعل في حالة عدم استلام الطلب أو... (score: 0.34)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني ترقية خطتي الشهرية عبر الموقع؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 30ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون شحن مجاني على الطلبات الكبيرة؟ (score: 0.48)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يمكنني إعادة تعيين كلمة المرور؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 33ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني تأمين حسابي ومنع الوصول غي... (score: 0.36)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل توجد طرق دفع بديلة غير البطاقة الائتمانية؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 41ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط التسعير الأساسية وال... (score: 0.29)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كم من الوقت يستغرق وصول الشحنة إلى السعودية؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 38ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تغيير خطة الاشتراك أو إلغاؤ... (score: 0.37)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: طلبت منتج ناقص قطعه الأساسية، وهذا أمر محبط جداً.
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 38ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ماذا أفعل في حالة عدم استلام الطلب أو... (score: 0.41)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل سعر هذا الجهاز يتضمن الشحن إلى جميع المدن؟
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 37ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون دعمًا فنيًا على مدار الساعة؟ (score: 0.47)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لدي مشكلة في تسجيل الصوت داخل التطبيق، الرجاء المساعدة.
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:43 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 46ms
+2026-02-16 22:50:43 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل توفرون إيصالات وفواتير للمدفوعات؟ (score: 0.37)
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لم أتلقَ فاتورة هذا الشهر عبر البريد الإلكتروني، هل بالإم...
+2026-02-16 22:50:43 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 114ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يوجد دعم فني على مدار الساعة فيما ... (score: 0.47)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: ما هي الإجراءات اللازمة لإلغاء الخدمة؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 40ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.29)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لقد تم احتساب مبلغ إضافي في فاتورتي بشكل خاطئ!
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 38ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تغيير خطة الاشتراك أو إلغاؤ... (score: 0.38)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يتم تقديم ضمان ممتد على كافة المنتجات؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 36ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تتوفر ضمانات على المنتجات؟ (score: 0.30)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: البرنامج لا يستجيب وأحتاج للدعم فوراً.
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 35ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط الاشتراك Basic، Adva... (score: 0.40)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني معرفة تفاصيل فاتورة الدفع الأخيرة؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 32ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني الحصول على فاتورة مفصلة لط... (score: 0.41)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنكم توضيح مميزات خدمة الدعم السريع؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 50ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.46)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لم أعد قادرًا على استخدام حسابي، أرجو المساعدة عاجلاً.
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 31ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يوجد دعم فني على مدار الساعة فيما ... (score: 0.46)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يتوفر المنتج بألوان أخرى؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 23ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون شحن مجاني على الطلبات الكبيرة؟ (score: 0.41)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لماذا لا تعمل خاصية الدفع الإلكتروني في التطبيق الآن؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 29ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل توفرون إيصالات وفواتير للمدفوعات؟ (score: 0.45)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يمكنني تحديث بيانات الفاتورة الخاصة بي؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 28ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.39)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل تقدمون خدمة الدعم عبر الهاتف؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 21ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني التواصل مع خدمة الدعم الفن... (score: 0.40)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لقد اضطررت لانتظار طويل للحصول على الدعم وهذه ليست الخدمة...
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 33ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني تحديث البرنامج لأحدث إصدار؟ (score: 0.37)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني استبدال المنتج إذا لم يعجبني؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 31ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تعديل أو إلغاء الطلب بعد تأ... (score: 0.40)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: التطبيق يغلق فجأة عند محاولة فتح ملف PDF، الرجاء الدعم.
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 33ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل توفرون إيصالات وفواتير للمدفوعات؟ (score: 0.28)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يمكنني إرسال طلب تظلم على فاتورة؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 27ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني الحصول على فاتورة مفصلة لط... (score: 0.33)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل توفير خدمة العملاء متاح على مدار الساعة؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 49ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تغيير خطة الاشتراك أو إلغاؤ... (score: 0.44)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لقد تم احتساب فاتورة مرتفعة بشكل غير مبرر، أريد توضيحاً ف...
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 34ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي التفاصيل الفنية حول المنتج المح... (score: 0.40)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يوجد نسخة تجريبية من البرنامج لأجربه قبل الشراء؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 49ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الباقات المتوفرة لديكم؟ (score: 0.50)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لا يمكنني الاتصال بالدعم الفني عبر الهاتف، هل هناك مشكلة؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 33ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل هناك نصائح لتحسين سرعة البرنامج وت... (score: 0.48)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: أريد تفاصيل أكثر حول فاتورة الشهر الماضي، هل يمكن إرسالها؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 41ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني الحصول على فاتورة مفصلة لط... (score: 0.44)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل تقدمون خصومات للمؤسسات أو الشركات؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 37ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني التواصل مع خدمة الدعم الفن... (score: 0.43)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: أريد التعبير عن استيائي من رد موظفي خدمة العملاء
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 32ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.47)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل من الممكن الحصول على كتيب إرشادات المنتج إلكترونياً؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 33ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تتبع شحنتي بعد الطلب؟ (score: 0.51)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: جهازي لا يتصل بالشبكة اللاسلكية بالرغم من إعادة التشغيل.
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 34ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل توفرون إيصالات وفواتير للمدفوعات؟ (score: 0.34)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني طلب نسخة ورقية من الفاتورة البريدية؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 49ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني إلغاء الدفع أو استرداد المب... (score: 0.42)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل تقدمون دورة تدريبية عن استخدام المنتج الجديد؟
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:44 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 34ms
+2026-02-16 22:50:44 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تغيير خطة الاشتراك أو إلغاؤ... (score: 0.38)
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: المنتج الذي استلمته لا يعمل منذ اليوم الأول!
+2026-02-16 22:50:44 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 30ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.35)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني معرفة ما إذا كان المنتج متوفر في فرعكم بجدة؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 57ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تضمنون حماية بياناتي الشخصية ومالية؟ (score: 0.42)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: برنامج التحويل المالي لا يستجيب وأريد إجراء عملية عاجلة.
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 195ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل توفرون إيصالات وفواتير للمدفوعات؟ (score: 0.45)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكن معرفة سبب زيادة قيمة الفاتورة الأخيرة؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 77ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني إلغاء الدفع أو استرداد المب... (score: 0.37)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: ما هو رقم خدمة العملاء للتواصل في ساعات المساء؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 35ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.45)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لماذا يستغرق الرد على شكاواي وقتاً طويلاً؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 34ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي سياسة الشحن وهل يوجد شحن مجاني؟ (score: 0.39)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل من الممكن التنقل بين الخطط الشهرية خلال فترة العقد؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 35ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون شحن مجاني على الطلبات الكبيرة؟ (score: 0.49)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لا أستطيع تشغيل التطبيق بعد التحديث، هل هناك طريقة لاسترج...
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 41ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل توفرون إيصالات وفواتير للمدفوعات؟ (score: 0.38)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني دفع الفاتورة عبر تطبيق الهاتف المحمول؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 35ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.44)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: ما هي طرق التواصل في حال توقف الخدمة فجأة؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 29ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تغيير خطة الاشتراك أو إلغاؤ... (score: 0.34)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لقد أخطأتم بخصم مبلغ غير مستحق من حسابي، أرجو التوضيح.
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 38ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني إلغاء الدفع أو استرداد المب... (score: 0.44)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكن استخدام المنتج مع أجهزة أخرى مختلفة؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 31ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون دعمًا فنيًا على مدار الساعة؟ (score: 0.48)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: برنامج التحديث لا يكتمل رسالة الخطأ تظهر باستمرار.
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 33ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط الاشتراك Basic، Adva... (score: 0.49)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني الاستعلام عن تاريخ استحقاق الفاتورة القادمة؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 33ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.49)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: ما هي إجراءات التقدم بشكوى رسمية؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 28ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.32)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: خدمة العملاء غير متعاونة ورفضوا مراجعة حسابي.
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 29ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أوقات عمل خدمة العملاء؟ (score: 0.47)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل أحتاج إلى تسجيل جديد للحصول على التحديثات؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 34ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون شحن مجاني على الطلبات الكبيرة؟ (score: 0.40)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: الجهاز يعلق عند فتح أحد التطبيقات، ماذا أنصحني؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 44ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط الاشتراك Basic، Adva... (score: 0.39)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يمكن مراجعة الفواتير المدفوعة سابقاً؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 21ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.32)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل تقدمون الجيل الرابع في منطقتي؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 27ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تغيير خطة الاشتراك أو إلغاؤ... (score: 0.28)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: المنتج الذي وصلني معيب والضمان لا يغطي هذه الحالة، ماذا أ...
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 39ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي التفاصيل الفنية حول المنتج المح... (score: 0.50)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني دمج اشتراكات متعددة في حساب واحد؟
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:45 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 33ms
+2026-02-16 22:50:45 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني تتبع شحنتي بعد الطلب؟ (score: 0.39)
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: التطبيق يعلق عند فتح القائمة الرئيسية وأحتاج لإصلاح سريع.
+2026-02-16 22:50:45 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 49ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل توفرون إيصالات وفواتير للمدفوعات؟ (score: 0.42)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يتم احتساب الرسوم عند تجاوز الاستخدام الشهري؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 32ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.42)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل تقدمون خصومات خاصة للخريجين الجدد؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 33ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني التواصل مع خدمة الدعم الفن... (score: 0.50)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: تم إلغاء طلبي دون إشعار مسبق، وهذا غير مقبول.
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 31ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني إلغاء الدفع أو استرداد المب... (score: 0.34)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل المنتج مقاوم للماء ومناسب للأنشطة الخارجية؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 28ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل تقدمون دعمًا فنيًا على مدار الساعة؟ (score: 0.42)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لم أتمكن من تحميل التحديث الجديد من المتجر الرسمي.
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 30ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي سياسة الاسترداد والإرجاع الخاصة... (score: 0.40)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني تلقي الفواتير عبر الرسائل القصيرة؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 38ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف تحمون بياناتي أثناء عملية الدفع؟ (score: 0.41)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: ما هي الفروقات بين الباقات الشهرية المتوفرة؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 42ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي طرق الدفع المتاحة لديكم؟ (score: 0.35)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: مرسلي تأخر ويوم كامل بدون أي ردود، لا يمكنني قبول هذا الإ...
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 59ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي سياسة الاسترداد والإرجاع الخاصة... (score: 0.53)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني الحصول على نسخة من بيانات الصيانة للعام الماضي؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 70ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل هناك خصومات على الباقات عند الاشتر... (score: 0.51)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: لماذا يستهلك التطبيق كثيراً من بيانات الإنترنت؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 34ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط الاشتراك Basic، Adva... (score: 0.36)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يمكنني إلغاء طلب الفاتورة الإلكترونية واستلام الورقية...
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 37ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: هل يمكنني إلغاء الدفع أو استرداد المب... (score: 0.43)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يمكنني الوصول إلى الدعم عبر وسائل التواصل الاجتماعي؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 29ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.46)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: أنا غاضب جداً من ردودكم البطيئة وفقدت الثقة في خدماتكم.
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: complaint
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 39ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أوقات عمل خدمة العملاء؟ (score: 0.43)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل توجد نسخة مصغرة من المنتج لأغراض تجريبية؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: product_inquiry
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: product_inquiry | 32ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي التفاصيل الفنية حول المنتج المح... (score: 0.46)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: التطبيق يطلب تحديثات متكررة ويستهلك مساحة تخزين كبيرة جداً.
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: technical_support
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: technical_support | 30ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ماذا أفعل إذا تعطل التثبيت أو توقف فجأة؟ (score: 0.40)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: كيف يمكن تعديل طريقة الدفع الافتراضية في حسابي؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: billing_question
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: billing_question | 37ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: كيف يمكنني الحصول على فاتورة مفصلة لط... (score: 0.30)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: هل يتوفر دعم تقني على مدار 24 ساعة لكل المنتجات؟
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: general_question
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 7 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 7 docs | category: general_question | 32ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما هي أسعار الاشتراكات المتاحة لديكم؟ (score: 0.41)
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - 🔍 Retrieving docs for: أرفض الطريقة التي تمت بها معالجة شكوائي وأطالب بتدخل مباش...
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process -    Intent: escalation_needed
+2026-02-16 22:50:46 | DEBUG    | backend.data.knowledge_base_manager:search - 🔍 Search returned 10 results
+2026-02-16 22:50:46 | INFO     | backend.agents.knowledge_retriever:process - ✅ Retrieved 10 docs | category: all | 38ms
+2026-02-16 22:50:46 | DEBUG    | backend.agents.knowledge_retriever:process - Top result: ما الفرق بين خطط الاشتراك Basic، Adva... (score: 0.41)
+2026-02-16 22:50:46 | INFO     | __main__:main - 💾 Saving results...
+2026-02-16 22:50:46 | INFO     | __main__:save_results - 💾 Saved results to C:\Users\Guide Info\Desktop\arabic-customer-service\backend\data\benchmark_results\agent_2\meta-llama_llama-4-maverick-17b-128e-instruct\benchmark_results.json
+2026-02-16 22:55:07 | INFO     | backend.api.main:lifespan - 🚀 Starting Arabic Customer Service API...
+2026-02-16 22:55:07 | INFO     | backend.api.main:lifespan - 📚 Initializing knowledge base...
+2026-02-16 22:55:07 | INFO     | backend.data.knowledge_base_manager:__init__ - 🔧 Initializing KnowledgeBaseManager
+2026-02-16 22:55:07 | INFO     | backend.data.knowledge_base_manager:__init__ -    Embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:55:07 | INFO     | backend.data.knowledge_base_manager:__init__ -    Collection: arabic_knowledge_base
+2026-02-16 22:55:08 | INFO     | backend.data.knowledge_base_manager:__init__ - 📥 Loading embedding model (this may take a moment)...
+2026-02-16 22:55:26 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Embedding model loaded successfully
+2026-02-16 22:55:26 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Loaded existing collection: arabic_knowledge_base
+2026-02-16 22:55:26 | INFO     | backend.data.knowledge_base_manager:__init__ - 📊 Collection contains 70 documents
+2026-02-16 22:55:26 | INFO     | backend.api.main:lifespan - ✅ Knowledge base loaded: 70 documents
+2026-02-16 22:55:26 | INFO     | backend.api.main:lifespan - 🔧 Initializing multi-agent workflow...
+2026-02-16 22:55:26 | INFO     | backend.orchestrator.workflow:__init__ - 🔧 Initializing agents...
+2026-02-16 22:55:27 | INFO     | backend.agents.intent_classifier:__init__ - ✅ IntentClassifierAgent initialized with model: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-02-16 22:55:27 | INFO     | backend.agents.knowledge_retriever:__init__ - 🔧 Initializing knowledge base...
+2026-02-16 22:55:27 | INFO     | backend.data.knowledge_base_manager:__init__ - 🔧 Initializing KnowledgeBaseManager
+2026-02-16 22:55:27 | INFO     | backend.data.knowledge_base_manager:__init__ -    Embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:55:27 | INFO     | backend.data.knowledge_base_manager:__init__ -    Collection: arabic_knowledge_base
+2026-02-16 22:55:27 | INFO     | backend.data.knowledge_base_manager:__init__ - 📥 Loading embedding model (this may take a moment)...
+2026-02-16 22:55:27 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Embedding model loaded successfully
+2026-02-16 22:55:27 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Loaded existing collection: arabic_knowledge_base
+2026-02-16 22:55:27 | INFO     | backend.data.knowledge_base_manager:__init__ - 📊 Collection contains 70 documents
+2026-02-16 22:55:27 | INFO     | backend.agents.knowledge_retriever:__init__ - ✅ KnowledgeRetrieverAgent initialized
+2026-02-16 22:55:27 | INFO     | backend.agents.knowledge_retriever:__init__ -    Documents in KB: 70
+2026-02-16 22:55:27 | INFO     | backend.agents.knowledge_retriever:__init__ -    Embedding Model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:55:27 | INFO     | backend.agents.knowledge_retriever:__init__ -    Results per query: 10
+2026-02-16 22:55:27 | INFO     | backend.orchestrator.workflow:__init__ - ✅ Multi-Agent Workflow initialized
+2026-02-16 22:55:27 | INFO     | backend.api.main:lifespan - ✅ Workflow initialized successfully
+2026-02-16 22:56:37 | INFO     | backend.api.main:lifespan - 🛑 Shutting down API...
+2026-02-16 22:56:43 | INFO     | backend.api.main:lifespan - 🚀 Starting Arabic Customer Service API...
+2026-02-16 22:56:43 | INFO     | backend.api.main:lifespan - 📚 Initializing knowledge base...
+2026-02-16 22:56:43 | INFO     | backend.data.knowledge_base_manager:__init__ - 🔧 Initializing KnowledgeBaseManager
+2026-02-16 22:56:43 | INFO     | backend.data.knowledge_base_manager:__init__ -    Embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:56:43 | INFO     | backend.data.knowledge_base_manager:__init__ -    Collection: arabic_knowledge_base
+2026-02-16 22:56:43 | INFO     | backend.data.knowledge_base_manager:__init__ - 📥 Loading embedding model (this may take a moment)...
+2026-02-16 22:56:58 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Embedding model loaded successfully
+2026-02-16 22:56:58 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Loaded existing collection: arabic_knowledge_base
+2026-02-16 22:56:59 | INFO     | backend.data.knowledge_base_manager:__init__ - 📊 Collection contains 70 documents
+2026-02-16 22:56:59 | INFO     | backend.api.main:lifespan - ✅ Knowledge base loaded: 70 documents
+2026-02-16 22:56:59 | INFO     | backend.api.main:lifespan - 🔧 Initializing multi-agent workflow...
+2026-02-16 22:56:59 | INFO     | backend.orchestrator.workflow:__init__ - 🔧 Initializing agents...
+2026-02-16 22:56:59 | INFO     | backend.agents.intent_classifier:__init__ - ✅ IntentClassifierAgent initialized with model: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-02-16 22:56:59 | INFO     | backend.agents.knowledge_retriever:__init__ - 🔧 Initializing knowledge base...
+2026-02-16 22:56:59 | INFO     | backend.data.knowledge_base_manager:__init__ - 🔧 Initializing KnowledgeBaseManager
+2026-02-16 22:56:59 | INFO     | backend.data.knowledge_base_manager:__init__ -    Embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:56:59 | INFO     | backend.data.knowledge_base_manager:__init__ -    Collection: arabic_knowledge_base
+2026-02-16 22:56:59 | INFO     | backend.data.knowledge_base_manager:__init__ - 📥 Loading embedding model (this may take a moment)...
+2026-02-16 22:56:59 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Embedding model loaded successfully
+2026-02-16 22:56:59 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Loaded existing collection: arabic_knowledge_base
+2026-02-16 22:56:59 | INFO     | backend.data.knowledge_base_manager:__init__ - 📊 Collection contains 70 documents
+2026-02-16 22:56:59 | INFO     | backend.agents.knowledge_retriever:__init__ - ✅ KnowledgeRetrieverAgent initialized
+2026-02-16 22:56:59 | INFO     | backend.agents.knowledge_retriever:__init__ -    Documents in KB: 70
+2026-02-16 22:56:59 | INFO     | backend.agents.knowledge_retriever:__init__ -    Embedding Model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:56:59 | INFO     | backend.agents.knowledge_retriever:__init__ -    Results per query: 10
+2026-02-16 22:57:00 | INFO     | backend.orchestrator.workflow:__init__ - ✅ Multi-Agent Workflow initialized
+2026-02-16 22:57:00 | INFO     | backend.api.main:lifespan - ✅ Workflow initialized successfully
+2026-02-16 22:58:11 | INFO     | backend.api.main:lifespan - 🛑 Shutting down API...
+2026-02-16 22:58:18 | INFO     | backend.api.main:lifespan - 🚀 Starting Arabic Customer Service API...
+2026-02-16 22:58:18 | INFO     | backend.api.main:lifespan - 📚 Initializing knowledge base...
+2026-02-16 22:58:18 | INFO     | backend.data.knowledge_base_manager:__init__ - 🔧 Initializing KnowledgeBaseManager
+2026-02-16 22:58:18 | INFO     | backend.data.knowledge_base_manager:__init__ -    Embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:58:18 | INFO     | backend.data.knowledge_base_manager:__init__ -    Collection: arabic_knowledge_base
+2026-02-16 22:58:18 | INFO     | backend.data.knowledge_base_manager:__init__ - 📥 Loading embedding model (this may take a moment)...
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Embedding model loaded successfully
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Loaded existing collection: arabic_knowledge_base
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ - 📊 Collection contains 70 documents
+2026-02-16 22:58:34 | INFO     | backend.api.main:lifespan - ✅ Knowledge base loaded: 70 documents
+2026-02-16 22:58:34 | INFO     | backend.api.main:lifespan - 🔧 Initializing multi-agent workflow...
+2026-02-16 22:58:34 | INFO     | backend.orchestrator.workflow:__init__ - 🔧 Initializing agents...
+2026-02-16 22:58:34 | INFO     | backend.agents.intent_classifier:__init__ - ✅ IntentClassifierAgent initialized with model: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-02-16 22:58:34 | INFO     | backend.agents.knowledge_retriever:__init__ - 🔧 Initializing knowledge base...
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ - 🔧 Initializing KnowledgeBaseManager
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ -    Embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ -    Collection: arabic_knowledge_base
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ - 📥 Loading embedding model (this may take a moment)...
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Embedding model loaded successfully
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ - ✅ Loaded existing collection: arabic_knowledge_base
+2026-02-16 22:58:34 | INFO     | backend.data.knowledge_base_manager:__init__ - 📊 Collection contains 70 documents
+2026-02-16 22:58:35 | INFO     | backend.agents.knowledge_retriever:__init__ - ✅ KnowledgeRetrieverAgent initialized
+2026-02-16 22:58:35 | INFO     | backend.agents.knowledge_retriever:__init__ -    Documents in KB: 70
+2026-02-16 22:58:35 | INFO     | backend.agents.knowledge_retriever:__init__ -    Embedding Model: sentence-transformers/all-MiniLM-L6-v2
+2026-02-16 22:58:35 | INFO     | backend.agents.knowledge_retriever:__init__ -    Results per query: 10
+2026-02-16 22:58:35 | INFO     | backend.orchestrator.workflow:__init__ - ✅ Multi-Agent Workflow initialized
+2026-02-16 22:58:35 | INFO     | backend.api.main:lifespan - ✅ Workflow initialized successfully
+2026-02-16 23:00:06 | INFO     | backend.api.main:lifespan - 🛑 Shutting down API...
